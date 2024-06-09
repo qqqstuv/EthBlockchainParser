@@ -6,6 +6,7 @@ This program was fun to write. I thought I would write up a quick summary to exp
 ```
 go mod init test/blockchain
 go install test/blockchain
+go build
 ```
 
 2. Running the program:
