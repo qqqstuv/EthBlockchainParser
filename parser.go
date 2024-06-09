@@ -83,7 +83,7 @@ func (p *Parser) GetTransactions(address string) []Transaction {
 	}
 
 	// Iterate through blocks starting from the last parsed block
-	for blockI := p.currentBlock.Int64(); blockI >= p.currentBlock.Int64(); blockI-- {
+	for blockI := p.currentBlock.Int64(); blockI >= 0; blockI-- {
 
 		block, err := p.client.BlockByNumber(context.Background(), big.NewInt(blockI))
 		if err != nil {
